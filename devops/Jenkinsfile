@@ -52,13 +52,14 @@ node {
    sh label: 'DOCKER DEPLOYMENT', script: 'docker-compose up -d --build'
   }
 	 
-
+ }
 notify('Job Completed')   
 } catch (err) {
   notify("Error ${err}")
   currentBuild.result = 'FAILURE'
-}
-}
+ }
+ }	 
+
 
 def notify(status){
     emailext (
