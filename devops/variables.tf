@@ -1,3 +1,4 @@
+  
 variable "key_name" {
   default = "aws_301"
 }
